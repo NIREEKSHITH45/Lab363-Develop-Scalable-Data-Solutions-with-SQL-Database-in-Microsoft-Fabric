@@ -101,23 +101,11 @@ Your API for GraphQL is now ready to accept connections and requests. You can us
 
 You have been asked to create an application that shows all affected Suppliers if a Location has a supply chain break due to natural disasters or other interruptions. This code shows how to create an ASP.NET application that uses a GraphQL Query to access a Query in the SQL in Microsoft Fabric GraphQL endpoint you created in the previous task.
 
-1. Please install the appropriate .NET SDK for your operating system if you haven't already installed it on your machine.
-
-[.NET SDK link](https://dotnet.microsoft.com/download)
-
-2. Please install Azure CLI for your operating system.
-
-[MSI Azure CLI (windows) link](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?pivots=msi)
-
-[Azure CLI (macOS) link](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-macos)
-
-> **Note:** Please ensure that the .NET SDK and Azure CLI are installed before proceeding to the next steps.
-
-3. Once you have the .NET SDK and Azure CLI installed, open **PowerShell ISE**.
+1. Open **PowerShell ISE**.
 
    ![](../media/f38.png)
 
-4. Click on **New script** from the ribbon and paste the following **PowerShell** script then click on the **Run** button.
+2. Click on **New script** from the ribbon and paste the following **PowerShell** script then click on the **Run** button.
 
    ![](../media/g14.png)
 
@@ -240,29 +228,29 @@ You have been asked to create an application that shows all affected Suppliers i
 
     ```
 
-5. You'll be prompted to enter the endpoint that you copied in earlier step. Paste it into the **PowerShell** and press **Enter**.
+3. You'll be prompted to enter the endpoint that you copied in earlier step. Paste it into the **PowerShell** and press **Enter**.
 
    ![](../media/f41.png)
 
-6. Browse the **URL** (https://microsoft.com/devicelogin) in another tab of your browser and copy the **code**.
+4. Browse the **URL** (https://microsoft.com/devicelogin) in another tab of your browser and copy the **code**.
 
    ![](../media/f94.png)
 
-7. Paste the **code** and click on the **Next** button.
+5. Paste the **code** and click on the **Next** button.
 
     ![](../media/f95.png)
 
-8. Select the **Azure account** to sign in.
+6. Select the **Azure account** to sign in.
 
     >**Note:** Ensure to use only the Azure credentials provided in the Lab to log in.
 
     ![](../media/f96.png)
 
-9. Click on the **Continue** button.
+7. Click on the **Continue** button.
 
     ![](../media/f97.png)
 
-10. When you see the below screenshot, close the tab of your browser and go back to the **Powershell**.
+8. When you see the below screenshot, close the tab of your browser and go back to the **Powershell**.
 
     ![](../media/f98.png)
 
@@ -276,15 +264,15 @@ You have been asked to create an application that shows all affected Suppliers i
 
 -->
 
-11. After successful login, a localhost URL will be generated. Copy that URL.
+9. After successful login, a localhost URL will be generated. Copy that URL.
 
     ![](../media/f43.png)
 
-12. Paste the copied link into your web browser, enter the **Location ID** as **7**, and click on the **Search** button.
+10. Paste the copied link into your web browser, enter the **Location ID** as **7**, and click on the **Search** button.
 
     ![](../media/f44.png)
 
-13. Observe the response.
+11. Observe the response.
 
     ![](../media/f45.png)
 
