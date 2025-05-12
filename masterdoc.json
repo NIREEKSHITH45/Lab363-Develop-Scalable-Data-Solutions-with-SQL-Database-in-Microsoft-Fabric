@@ -1,0 +1,46 @@
+[
+    {
+      "Name": "Lab363-Develop-Scalable-Data-Solutions-with-SQL-Database-in-Microsoft-Fabric",
+      "Language": "English",
+      "BaseURL": "https://github.com/NIREEKSHITH45/Lab363-Develop-Scalable-Data-Solutions-with-SQL-Database-in-Microsoft-Fabric",
+      "Files": [
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/NIREEKSHITH45/Lab363-Develop-Scalable-Data-Solutions-with-SQL-Database-in-Microsoft-Fabric/refs/heads/main/Workshop_Exercises/00%20Overview.md",
+          "Order": 0
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/NIREEKSHITH45/Lab363-Develop-Scalable-Data-Solutions-with-SQL-Database-in-Microsoft-Fabric/refs/heads/main/Workshop_Exercises/gettingstarted.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/NIREEKSHITH45/Lab363-Develop-Scalable-Data-Solutions-with-SQL-Database-in-Microsoft-Fabric/refs/heads/main/Workshop_Exercises/01%20-%20Loading%20Data%20into%20SQL%20Database.md",
+          "Order": 2
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/NIREEKSHITH45/Lab363-Develop-Scalable-Data-Solutions-with-SQL-Database-in-Microsoft-Fabric/refs/heads/main/Workshop_Exercises/02%20-%20Introduction%20to%20Copilot%20for%20SQL%20Database.md",
+          "Order" : 3
+        },
+  
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/NIREEKSHITH45/Lab363-Develop-Scalable-Data-Solutions-with-SQL-Database-in-Microsoft-Fabric/refs/heads/main/Workshop_Exercises/03%20-%20Data%20Serving.md",
+          "Order": 4
+        },
+        {
+          "RawFilePath": "https://github.com/NIREEKSHITH45/Lab363-Develop-Scalable-Data-Solutions-with-SQL-Database-in-Microsoft-Fabric/blob/main/Workshop_Exercises/04%20-%20RAG%20Implementation%20with%20Azure%20OpenAI.md",
+          "Order" : 5
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/NIREEKSHITH45/Lab363-Develop-Scalable-Data-Solutions-with-SQL-Database-in-Microsoft-Fabric/refs/heads/main/Workshop_Exercises/05%20-%20%20Creating%20Mirrored%20Azure%20Cosmos%20DB.md",
+          "Order" : 6
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/NIREEKSHITH45/Lab363-Develop-Scalable-Data-Solutions-with-SQL-Database-in-Microsoft-Fabric/refs/heads/main/Workshop_Exercises/06%20-%20Exploring%20GraphQL%20API%20Endpoints%20in%20Microsoft%20Fabric.md",
+          "Order" : 7
+        },
+        {
+          "RawFilePath": "https://github.com/NIREEKSHITH45/Lab363-Develop-Scalable-Data-Solutions-with-SQL-Database-in-Microsoft-Fabric/blob/main/Workshop_Exercises/07%20-%20Data%20Security%20and%20Compliance.md",
+          "Order" : 8
+        }
+      ]
+    }
+  ]
