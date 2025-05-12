@@ -42,9 +42,6 @@ In this task, you will use **Dataflow Gen2** to ingest data and efficiently copy
    ![](../media/h16.png)
 
     > **Note:** Wait for the Power BI Workspace to load.
-<!--
-![alt text](../media/image-9.png)
--->
 
 6. If you see a pop-up like the one shown below, click **Got It** to proceed.
 
