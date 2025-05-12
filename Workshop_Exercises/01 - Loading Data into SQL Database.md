@@ -108,12 +108,12 @@ Ingest data from Azure SQL DB
 10.  Scroll down and select **Basic** in the **Authentication kind** dropdown. Enter ``labsqladmin`` as the **Username**, ``Smoothie@2025`` as the **Password** and click on the **Next** button.
 
 ```
-    Username : labsqladmin
+  labsqladmin
 ```
 
 ```
-    Password : Smoothie@2025
- ```
+ Smoothie@2025
+```
 
 11. Check **Select all** box and click on the **Next** button.
 
