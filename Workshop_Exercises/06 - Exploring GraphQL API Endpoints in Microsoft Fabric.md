@@ -113,7 +113,6 @@ You have been asked to create an application that shows all affected Suppliers i
     function RefreshTokens() {
         #Copy external blob content
     }
-
     function Check-HttpRedirect($uri) {
         $httpReq = [system.net.HttpWebRequest]::Create($uri)
         $httpReq.Accept = "text/html, application/xhtml+xml, */*"
@@ -158,7 +157,7 @@ You have been asked to create an application that shows all affected Suppliers i
         } 
 
         return $null;
-        }
+    }
 
     #az copy
 
@@ -225,7 +224,6 @@ You have been asked to create an application that shows all affected Suppliers i
     az login --use-device-code
 
     dotnet run
-
     ```
 
 3. You'll be prompted to enter the endpoint that you copied in earlier step. Paste it into the **PowerShell** and press **Enter**.
