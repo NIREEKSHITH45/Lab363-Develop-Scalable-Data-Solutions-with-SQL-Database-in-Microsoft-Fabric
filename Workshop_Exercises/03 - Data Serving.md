@@ -59,15 +59,15 @@ In this exercise, you will create a **semantic model** from the data previously 
    ![alt text](../media/img-2.png)
 
 
-4. Click on the **Contoso** workspace from the left navigation menu.
+4. Click on the **<inject key= "WorkspaceName" enableCopy="true"/>** workspace from the left navigation menu.
 
-5. Click on the **website_bounce_rate** semantic model.
+5. Select the ellipsis (three dots) next to the website_bounce_rate semantic model.
 
-   ![](../media/p9.png)
+   ![](../media/5.png)
 
-6. To create a new report using this semantic model, expand **Explore this data** in the top bar and click on **Create a blank report**.
+6. To create a new report using this semantic model, click on **Create report**.
 
-   ![](../media/p10.png)
+   ![](../media/4.png)
 
 
 #### Activity: Use Copilot AI in Power BI to enhance report creation and generate insights
