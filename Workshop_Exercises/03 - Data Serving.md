@@ -113,7 +113,6 @@ In this exercise, you will create a **semantic model** from the data previously 
 
     ```
     Create a report Bounce Rate analysis, to show the correlation between customer sentiment, particularly among millennials and Gen Z, unsuccessful product searches across different devices, and the website's bounce rate by customer generations.
-
     ```
 
 
@@ -137,7 +136,6 @@ In this exercise, you will create a **semantic model** from the data previously 
 
     ```
     Based on the data in the page, what can be done to improve the bounce rate of millennials?
-
     ```
 
    ![alt text](../media/img-12.png)
