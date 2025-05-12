@@ -244,39 +244,7 @@ function RefreshTokens() {
 
    ![](../media/f41.png)
 
-4. Browse the **URL** (https://microsoft.com/devicelogin) in another tab of your browser and copy the **code**.
-
-   ![](../media/f94.png)
-
-5. Paste the **code** and click on the **Next** button.
-
-    ![](../media/f95.png)
-
-6. Select the **Azure account** to sign in.
-
-    >**Note:** Ensure to use only the Azure credentials provided in the Lab to log in.
-
-    ![](../media/f96.png)
-
-7. Click on the **Continue** button.
-
-    ![](../media/f97.png)
-
-8. When you see the below screenshot, close the tab of your browser and go back to the **Powershell**.
-
-    ![](../media/f98.png)
-
-<!--
-
-6. You'll be prompted to log in. Enter the credentials provided with the lab and click on the **Next** button to log in.
-
-![](../media/f42.png)
-
->**Note:** On the next screen, you'll be prompted to enter your password provided with the lab.
-
--->
-
-9. After successful login, a localhost URL will be generated. Copy that URL.
+9. A localhost URL will be generated. Copy that URL.
 
     ![](../media/f43.png)
 
