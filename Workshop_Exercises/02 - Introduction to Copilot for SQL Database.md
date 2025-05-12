@@ -8,6 +8,10 @@ In this exercise, you will use **Copilot** to assist with T-SQL queries, includi
 
 1. In the **Query Editor**, paste the query ```SELECT TOP(10) ``` and observe how Copilot suggests code to complete your query.
 
+```
+SELECT TOP(10)
+```
+
     >**Note:** Copilot responses may not match what is shown in the screenshot but will provide similar results.
 
    ![](../media/p3.png)
@@ -55,7 +59,6 @@ In this exercise, you will use **Copilot** to assist with T-SQL queries, includi
 
     ```
     What is the most sold product?
-
     ```
 
     >**Note:** Copilot responses may not match what is shown in the screenshot but will provide similar results.
