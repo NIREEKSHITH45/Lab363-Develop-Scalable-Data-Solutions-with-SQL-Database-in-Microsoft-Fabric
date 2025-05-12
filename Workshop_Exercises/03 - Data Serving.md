@@ -36,6 +36,10 @@ In this exercise, you will create a **semantic model** from the data previously 
 
 6. Search for **website_bounce_rate** and select **website_bounce_rate table**, then click on the **Confirm** button.
 
+   ```
+   website_bounce_rate
+   ```
+
    ![](../media/p7.png)
 
    **Note:** Wait for the semantic model creation.
