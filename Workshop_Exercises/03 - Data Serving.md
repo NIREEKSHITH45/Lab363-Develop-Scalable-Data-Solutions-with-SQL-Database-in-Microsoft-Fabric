@@ -10,7 +10,7 @@ In this exercise, you will create a **semantic model** from the data previously 
 
 ### Task 3.1: Build Reports with Power BI
 
-1. Click on **Workspaces** and select the ****<inject key= WorkspaceName enableCopy="true"/>**** workspace.
+1. Click on **Workspaces** and select the **<inject key= "WorkspaceName" enableCopy="true"/>** workspace.
 
    ![](../media/3.png)
 
