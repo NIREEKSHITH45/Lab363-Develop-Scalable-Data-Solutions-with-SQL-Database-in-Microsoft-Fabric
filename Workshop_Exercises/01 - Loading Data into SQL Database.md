@@ -85,6 +85,10 @@ Data Factory for Microsoft Fabric is a powerful cloud-based data integration ser
 
 3. In the name field, enter ``Ingest data from Azure SQL DB``and click on the **Create** button.
 
+```
+Ingest data from Azure SQL DB
+```
+
 ![](../media/n2.png)
 
 4. From the **Home** tab of the pipeline editor, click on the **Copy data** dropdown and select **Use copy assistant** option.
