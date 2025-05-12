@@ -27,9 +27,9 @@ Let us implement RAG-pattern with Microsoft Fabric SQL Database, which now has t
 
     The code first establishes a master key for encryption purposes, then creates a credential that allows the Microsoft Fabric SQL Database to authenticate with the Azure OpenAI endpoint using an API key. Finally, it queries the system catalog to confirm the creation of the credential.
 
-    > **Note:** You can provide your own password instead of Smoothie@123 in the following code.
+> **Note:** You can provide your own password instead of Smoothie@123 in the following code.
 
-    ```
+```
     -- Create a master key for encryption with the specified password
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Smoothie@123';
 
@@ -43,8 +43,8 @@ Let us implement RAG-pattern with Microsoft Fabric SQL Database, which now has t
     FROM sys.database_scoped_credentials
     WHERE name = '<inject key= openAiEndpoint enableCopy="false"/>';
 
-    ```
-    ![](../media/Exe6_01_image.png)
+```
+![](../media/Exe6_01_image.png)
 
 4. Click on **New Query**, paste the query below, and then click on **Run**.
 
@@ -97,7 +97,7 @@ Let us implement RAG-pattern with Microsoft Fabric SQL Database, which now has t
     -- Set the output parameter with the extracted embedding data
     set @embedding = cast(@re as vector(1536));
 
-    ```
+```
    ![](../media/Exe6_02_image.png)
 
 5. Click on **New Query**, paste the query below, and then click on **Run**.
