@@ -11,8 +11,7 @@ In this exercise, you will use **Copilot** to assist with T-SQL queries, includi
 ```
 SELECT TOP(10)
 ```
-
-    >**Note:** Copilot responses may not match what is shown in the screenshot but will provide similar results.
+ >**Note:** Copilot responses may not match what is shown in the screenshot but will provide similar results.
 
    ![](../media/p3.png)
 
