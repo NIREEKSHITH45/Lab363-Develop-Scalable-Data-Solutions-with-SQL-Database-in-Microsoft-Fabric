@@ -50,6 +50,9 @@ Let's first create a view using a simple analytical T-SQL query. The new view, `
 
 
 6. Enter ``supplier_impact_gql`` in the **Name** field and click on the **Create** button.
+    ```
+    supplier_impact_gql
+    ```
 
     ![](../media/07.png)
 
@@ -59,6 +62,9 @@ Let's first create a view using a simple analytical T-SQL query. The new view, `
 At this point, the API is ready but it's not exposing any data. APIs for GraphQL are defined in a schema organized in terms of types and fields, in a strongly typed system. Microsoft Fabric automatically generates the necessary GraphQL schema based on the data you choose to expose to GraphQL clients.
 
 1. The **Choose data** screen enables you to search for and choose the objects to expose your GraphQL schema. Enter ``vProductsbySuppliers`` in the search bar, select the checkbox next to ``dbo.vProductsbySuppliers``, and click on the **Load** button.
+    ```
+    vProductsbySuppliers
+    ```
 
    ![](../media/f34.png)
 
@@ -85,7 +91,7 @@ The schema is generated, and you can start prototyping GraphQL queries (read, li
 
 1. Click on the **Copy endpoint** button in the ribbon.
 
-2. Click on the **Copy** button when the **Copy link** panel appears. Store this string in a notepad or other location to be used in the sample application for this tutorial. For example, it will look similar to: ``https://api.fabric.microsoft.com/v1/workspaces/<work space id>/graphqlapis/<graph api id>/graphql``
+2. Click on the **Copy** button when the **Copy link** panel appears. Store this string in a notepad or other location to be used in the sample application for this tutorial. For example, it will look similar to: ``https://<graphql guid>/v1/workspaces/<work space id>/graphqlapis/<graph api id>/graphql``
 
    ![](../media/f37.png)
 

@@ -24,6 +24,7 @@ Mirroring in Fabric provides an easy experience to avoid complex ETL (Extract Tr
     ![Task-1.1_4.png.png](../media/p19.png)
 
 12. Click on the dropdown for Database, then select **Telemetry** and click on **Connect** button.
+    >**Note**: If you do not see the database immediately, please wait a few seconds for it to finish loading.
 
     ![Task-1.1_5.png.png](../media/p20.png)
 
@@ -32,6 +33,7 @@ Mirroring in Fabric provides an easy experience to avoid complex ETL (Extract Tr
     ![Task-1.1_6.png.png](../media/p21.png)
 
 14. In the **Name** field, paste ```Telemetry```,click on the **Create mirrored database** button.
+    >**Note:** If the name isn't unique, you'll see an error asking for a different name. **Provide a unique name**.
 
     ![Task-1.1_7.png.png](../media/p22.png)
 
@@ -40,6 +42,8 @@ Mirroring in Fabric provides an easy experience to avoid complex ETL (Extract Tr
 ![Task-1.1_8.png.png](media/Task-1.1_8.png) -->
 
 15. Wait until the **Rows replicated** statistics are displayed. If not, **Refresh** the **Monitor replication** tab as shown in the following screen. Now, Azure Cosmos DB has been successfully mirrored.
+
+    >**Note**: It may take approximately 3–4 minutes for the Cosmos DB mirrored data to appear.
 
     ![Task-1.1_9.png.png](../media/p23.png)
 
