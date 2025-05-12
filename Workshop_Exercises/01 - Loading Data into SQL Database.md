@@ -99,21 +99,9 @@ Ingest data from Azure SQL DB
 
 ![](../media/n3.png)
 
->**Note:** Note: To fill in the details for required fileds, we need to fetch the details from the SQL Database resource deployed in the Azure Portal.
 
-![](../media/g10.png)
 
-6. Navigate to the [Azure Portal]('https://portal.azure.com/'), in the resource group **rg-fabcon...**, search for **sql** in the resource group window and click on the **SalesDb...** resource.
-
-![](../media/g11.png)
-
-7. Copy the **Server** name.
-
-![](../media/g12.png)
-
-8. Navigate back to the **Microsoft Fabric** tab on your browser.
-
-9. On the **Connection settings** pane, in the **Server** field, paste the value you copied in step number **6**, and in the **Database** field, paste ```SalesDb```.
+9. On the **Connection settings** pane, in the **Server** field, paste the **<inject key= "SQLServerFqdn" enableCopy="true"/>**, and in the **Database** field, paste ```SalesDb```.
 
 ![](../media/p2.png)
 
