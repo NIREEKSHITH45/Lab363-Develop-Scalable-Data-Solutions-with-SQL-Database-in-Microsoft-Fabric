@@ -17,24 +17,9 @@ Mirroring in Fabric provides an easy experience to avoid complex ETL (Extract Tr
 
     >**Note:** To fill in the details for required fields, we need to fetch the data from the Cosmosdb resource deployed in the Azure Portal.
 
-4. Navigate back to the **Azure Portal**, in the resource group, click on the **cosmosdb** resource.
+10. In the **Cosmos DB Endpoint** field, paste: **<inject key= CosmosEndpoint enableCopy="true"/>**
 
-   ![Pipeline.](../media/p17.png)
-
-
-5. Click on **keys**.
-
-6. Copy the **URL**.
-
-7. Click on **show primary key** icon. copy the **primary key**.
-
-    ![cosmosdb](../media/p18.png)
-
-8. Navigate back to the **Fabric** tab on your browser.
-
-10. In the **Cosmos DB Endpoint** field, paste the **URL** which copied in **step6**.
-
-11. Select **Account key** for Authentication kind, paste the **primary key** copied in **step 7** as key value, and click on the **Connect** button.
+11. Select **Account key** for Authentication kind, paste the following in the **Account Key** field: **<inject key= CosmosEndpoint enableCopy="true"/>**  and click on the **Connect** button.
 
     ![Task-1.1_4.png.png](../media/p19.png)
 
