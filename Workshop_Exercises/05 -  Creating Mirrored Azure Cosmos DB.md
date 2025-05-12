@@ -3,7 +3,7 @@
 Mirroring in Fabric provides an easy experience to avoid complex ETL (Extract Transform Load) and integrate your existing Azure Cosmos Database estate with the rest of your data in Microsoft Fabric.
 
 
-1. Select **<inject key= WorkspaceName enableCopy="true"/>** workspace from the left navigation pane.
+1. Select **<inject key= "WorkspaceName" enableCopy="true"/>** workspace from the left navigation pane.
 
    ![Task-1.1_1.png](../media/p14.png)
 

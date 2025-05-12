@@ -55,6 +55,10 @@ In this task, you will use **Dataflow Gen2** to ingest data and efficiently copy
 
 2. In the **Name** field, enter ```Contoso_database``` and click on the **Create** button. Database creation should take less than a minute.
 
+```
+Contoso_database
+```
+
 ![](../media/n1.png)
 
 3. When the new database is provisioned, on the **Home page** notice that the Explorer pane is showing database objects.
@@ -152,7 +156,7 @@ Data Factory for Microsoft Fabric is a powerful cloud-based data integration ser
 
 #### Activity: Verify the data transfer by querying tables in the SQL Database
 
-1. Click on **Workspaces** and select the **<inject key= WorkspaceName enableCopy="true"/>** workspace.
+1. Click on **Workspaces** and select the **<inject key= "WorkspaceName" enableCopy="true"/>** workspace.
 
 ![](../media/wss.png)
 
