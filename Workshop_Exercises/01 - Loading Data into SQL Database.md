@@ -150,7 +150,7 @@ Ingest data from Azure SQL DB
 
 1. Click on **Workspaces** and select the **<inject key= "WorkspaceName" enableCopy="true"/>** workspace.
 
-![](../media/wss.png)
+![](../media/3.png)
 
 2. Search for **database** and select the **Contoso_database**.
 
