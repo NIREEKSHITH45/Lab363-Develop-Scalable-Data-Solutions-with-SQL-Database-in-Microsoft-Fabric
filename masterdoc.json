@@ -26,7 +26,7 @@
           "Order": 4
         },
         {
-          "RawFilePath": "https://github.com/NIREEKSHITH45/Lab363-Develop-Scalable-Data-Solutions-with-SQL-Database-in-Microsoft-Fabric/blob/main/Workshop_Exercises/04%20-%20RAG%20Implementation%20with%20Azure%20OpenAI.md",
+          "RawFilePath": "https://raw.githubusercontent.com/NIREEKSHITH45/Lab363-Develop-Scalable-Data-Solutions-with-SQL-Database-in-Microsoft-Fabric/refs/heads/main/Workshop_Exercises/04%20-%20RAG%20Implementation%20with%20Azure%20OpenAI.md",
           "Order" : 5
         },
         {
@@ -38,7 +38,7 @@
           "Order" : 7
         },
         {
-          "RawFilePath": "https://github.com/NIREEKSHITH45/Lab363-Develop-Scalable-Data-Solutions-with-SQL-Database-in-Microsoft-Fabric/blob/main/Workshop_Exercises/07%20-%20Data%20Security%20and%20Compliance.md",
+          "RawFilePath": "https://raw.githubusercontent.com/NIREEKSHITH45/Lab363-Develop-Scalable-Data-Solutions-with-SQL-Database-in-Microsoft-Fabric/refs/heads/main/Workshop_Exercises/07%20-%20Data%20Security%20and%20Compliance.md",
           "Order" : 8
         }
       ]
