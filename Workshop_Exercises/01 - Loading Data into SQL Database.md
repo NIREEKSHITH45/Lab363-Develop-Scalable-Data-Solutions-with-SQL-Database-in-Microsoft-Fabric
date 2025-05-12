@@ -164,6 +164,10 @@ Ingest data from Azure SQL DB
 
 ![](../media/dim3u.png)
 
+```
+SELECT * FROM inventory
+```
+
 There you go! Your data has been transferred from the Azure SQL Database to the Microsoft Fabric SQL Database.
 
 Congratulations! You have successfully created your database in a new Microsoft Fabric workspace and ingested data from **Azure SQL Database**. You are ready to move on to the next exercise: **Introduction to Copilot for SQL Database**
