@@ -109,7 +109,7 @@ You have been asked to create an application that shows all affected Suppliers i
 
    ![](../media/g14.png)
 
-    ```
+```
     function RefreshTokens() {
         #Copy external blob content
     }
@@ -224,7 +224,7 @@ You have been asked to create an application that shows all affected Suppliers i
     az login --use-device-code
 
     dotnet run
-    ```
+```
 
 3. You'll be prompted to enter the endpoint that you copied in earlier step. Paste it into the **PowerShell** and press **Enter**.
 
