@@ -50,7 +50,7 @@ Let us implement RAG-pattern with Microsoft Fabric SQL Database, which now has t
 
     This SQL stored procedure is designed to interact with Azure OpenAI endpoint to get embeddings for a given search query using the text-embedding-ada-002 model. It utilizes the database scoped credential for authentication, ensuring secure access to the external service.
 
-    ```
+    ```SQL
     create or alter procedure [dbo].[get_embedding]
     @inputText nvarchar(max),
     @embedding vector (1536) output
@@ -63,13 +63,13 @@ Let us implement RAG-pattern with Microsoft Fabric SQL Database, which now has t
         -- Define headers for the REST API call
         DECLARE @headers NVARCHAR(MAX) = JSON_OBJECT(
         'Content-Type': 'application/json',
-        'api-key': '<inject key= openAiKey enableCopy="false"/>' 
+        'api-key': '<inject key="openAiKey" enableCopy="false"/>' 
     );
         -- Call the external REST API to get text embeddings
         exec @retval = sp_invoke_external_rest_endpoint
-            @url = '<inject key= openAiEndpoint enableCopy="false"/>openai/deployments/text-embedding-ada-002/embeddings?api-version=2023-05-15',
+            @url = '<inject key="openAiEndpoint" enableCopy="false"/>openai/deployments/text-embedding-ada-002/embeddings?api-version=2023-05-15',
             @method = 'POST',
-            @credential = [<inject key= openAiEndpoint enableCopy="false"/>],
+            @credential = [<inject key="openAiEndpoint" enableCopy="false"/>],
             @payload = @payload,
             @response = @response output;
     end try
@@ -96,14 +96,14 @@ Let us implement RAG-pattern with Microsoft Fabric SQL Database, which now has t
     declare @re nvarchar(max)= json_query(@response, '$.result.data[0].embedding')
     -- Set the output parameter with the extracted embedding data
     set @embedding = cast(@re as vector(1536));
-
     ```
 ![](../media/Exe6_02_image.png)
 
 5. Click on **New Query**, paste the query below, and then click on **Run**.
 
 This code declares a cursor to iterate through products in the dbo.dim_products table. It generates an embedding for each of the products using the stored procedure created in previous step (dbo.get_embedding), and inserts the results into the dbo.Product_Embeddings table.
-```
+
+```SQL
     -- Create a table named Product_Embeddings to hold product names, descriptions, and embeddings
     CREATE TABLE dbo.Product_Embeddings (
         ProductName NVARCHAR(MAX),
@@ -151,7 +151,6 @@ This code declares a cursor to iterate through products in the dbo.dim_products 
 
     CLOSE ProductCursor;
     DEALLOCATE ProductCursor;
-
 ```
    ![](../media/Exe6_03_image.png)
 
