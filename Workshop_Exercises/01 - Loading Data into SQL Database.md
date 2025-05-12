@@ -101,17 +101,15 @@ Data Factory for Microsoft Fabric is a powerful cloud-based data integration ser
 
 9. On the **Connection settings** pane, in the **Server** field, paste the **<inject key= "SQLServerFqdn" enableCopy="true"/>**, and in the **Database** field, paste ```SalesDb```.
 
-   ![](../media/p2.png)
-
 10.  Scroll down and select **Basic** in the **Authentication kind** dropdown. Enter ``labsqladmin`` as the **Username**, ``Smoothie@2025`` as the **Password** and click on the **Next** button.
 
    ```
    labsqladmin
    ```
-
    ```
    Smoothie@2025
    ```
+   ![](../media/p2.png)
 
 11. Check **Select all** box and click on the **Next** button.
 

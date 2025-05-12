@@ -59,7 +59,7 @@ In this exercise, you will create a **semantic model** from the data previously 
    ![alt text](../media/img-2.png)
 
 
-4. Click on the **<inject key= "WorkspaceName" enableCopy="true"/>** workspace from the left navigation menu.
+4. Click on the **<inject key= "WorkspaceName" enableCopy="false"/>** workspace from the left navigation menu.
 
 5. Select the ellipsis (three dots) next to the website_bounce_rate semantic model.
 
@@ -69,7 +69,8 @@ In this exercise, you will create a **semantic model** from the data previously 
 
    ![](../media/4.png)
 
-7. In the pop-up prompting you to upgrade to a paid Power BI license, select **Try Free**, then click Got it on the following confirmation pop-up.
+7. Click the **Try Free**** button in the pop-up window.
+8. In the confirmation dialog, click the **Got it** button to continue.
 
    ![](../media/6.png)
 
@@ -95,14 +96,6 @@ In this exercise, you will create a **semantic model** from the data previously 
 
 4. Select the option **What's in my data?**
 
-    > **Note:** If you don't see the 'What's in my data?' option, click in the Copilot **chat box** field, enter the following prompt, and click on the **Send** button.
-
-    ```What's in my data?```
-
-    ```
-    What's in my data?
-    ```
-
    ![alt text](../media/img-8.png)
 
     The first option, 'What’s in my data?' provides an overview of the contents of the dataset, identifies and describes what’s in it and what the attributes are about. So, there’s no need to wait for someone to explain the dataset. This improves the efficiency and volume of report creation.
@@ -115,15 +108,13 @@ In this exercise, you will create a **semantic model** from the data previously 
     Create a report Bounce Rate analysis, to show the correlation between customer sentiment, particularly among millennials and Gen Z, unsuccessful product searches across different devices, and the website's bounce rate by customer generations.
     ```
 
-
 6. Click on the **Send** button and wait for the results to load. 
 
    ![alt text](../media/img-10.png)
 	
     >**Note:** If you see the error message saying, 'Something went wrong.', try refreshing the page and restart the task. Being in a shared environment, the service may be busy at times.
-
-    - If Copilot needs additional context to understand your query, consider rephrasing the prompt to include more details.
-
+    >- If Copilot needs additional context to understand your query, consider rephrasing the prompt to include more details.
+    
     >**Note:** The responses from Copilot may not match the ones in the screenshot but will provide a similar response.
 
    ![alt text](../media/img-11.png)

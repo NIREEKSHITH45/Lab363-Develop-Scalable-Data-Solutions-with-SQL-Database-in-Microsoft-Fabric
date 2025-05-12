@@ -11,7 +11,7 @@ Contoso developers have been tasked with creating an online shopping copilot for
 
 Let us implement RAG-pattern with Microsoft Fabric SQL Database, which now has the dedicated vector data type. This allows for efficient and optimized storing of vector data, and comes with a set of functions to help developers streamline vector and similarity search implementation. The Azure OpenAI ada-002 model can be easily consumed within Microsoft Fabric SQL Database using the sp_invoke_external_rest_endpoint system stored procedure, to tranform data into embeddings.
 
-1. Click on **<inject key= "WorkspaceName" enableCopy="true"/>** select the workspace.
+1. Click on **<inject key= "WorkspaceName" enableCopy="false"/>** select the workspace.
 
    ![](../media/3.png)
 
@@ -29,7 +29,7 @@ Let us implement RAG-pattern with Microsoft Fabric SQL Database, which now has t
 
 > **Note:** You can provide your own password instead of Smoothie@123 in the following code.
 
-```
+    ```
     -- Create a master key for encryption with the specified password
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Smoothie@123';
 
@@ -43,7 +43,7 @@ Let us implement RAG-pattern with Microsoft Fabric SQL Database, which now has t
     FROM sys.database_scoped_credentials
     WHERE name = '<inject key= openAiEndpoint enableCopy="false"/>';
 
-```
+    ```
 ![](../media/Exe6_01_image.png)
 
 4. Click on **New Query**, paste the query below, and then click on **Run**.
