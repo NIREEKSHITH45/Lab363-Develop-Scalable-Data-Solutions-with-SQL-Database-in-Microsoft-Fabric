@@ -19,11 +19,11 @@ In this task, you will use **Dataflow Gen2** to ingest data and efficiently copy
 2. **Sign in** with your **Azure AD** credentials. If you are not already signed in, you will be redirected to the Microsoft Fabric login page.
 
 
-    > **Note:** Close any pop-up that appears on the screen.
+> **Note:** Close any pop-up that appears on the screen.
 
-    ![alt text](../media/image5u.png)
+![alt text](../media/image5u.png)
 
-    ![alt text](../media/newu.png)
+![alt text](../media/newu.png)
 
 3. From the left navigation pane, click on **Workspaces** and then the **+ New workspace** button.
 
