@@ -62,14 +62,14 @@
 
     ![](../media/welcometoms.png)
 
-7. Now, on the **Azure Portal** Dashboard, click on Search bar to search and select the Resource Group as **`rg-fabcon`**.
+7. Now, on the **Azure Portal** Dashboard, click on Search bar to search and select the Resource Group as **`rg-sqlfabric`**.
    
      ![](../media/1.png)
 
 
-8. Ensure the **deployment is successful!** Verify that the **Resource Group** contains **12 resources**.
+8. Ensure the **deployment is successful!** Verify that the **Resource Group** contains **13 resources**.
 
-    ![](../media/2.png)
+    ![](../media/rgname.png)
 
 This concludes the setup. You are now all set to explore the features and functionalities. Proceed to the next exercises, keeping the **Resource Group** tab open, and move forward with the next steps. 
 
