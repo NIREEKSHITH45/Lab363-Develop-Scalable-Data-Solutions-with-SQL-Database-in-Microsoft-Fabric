@@ -57,7 +57,7 @@ SELECT TOP(10)
 3. Paste the following question in the **Copilot** chat box and click on **Send**.
 
     ```
-    What is the most sold product?
+    What is the most sold dim product?
     ```
 
     >**Note:** Copilot responses may not match what is shown in the screenshot but will provide similar results.

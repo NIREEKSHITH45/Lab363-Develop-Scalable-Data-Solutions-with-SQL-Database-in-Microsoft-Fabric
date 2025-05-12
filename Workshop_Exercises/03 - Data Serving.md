@@ -12,7 +12,7 @@ In this exercise, you will create a **semantic model** from the data previously 
 
 1. Click on **Workspaces** and select the ****<inject key= WorkspaceName enableCopy="true"/>**** workspace.
 
-   ![](../media/wss.png)
+   ![](../media/3.png)
 
 2. Click on the **Contoso_database**.
 
