@@ -107,7 +107,7 @@ You have been asked to create an application that shows all affected Suppliers i
 
 2. Click on **New script** from the ribbon and paste the following **PowerShell** script then click on the **Run** button.
 
-   ![](../media/g14.png)
+![](../media/g14.png)
 
 ```
     function RefreshTokens() {
