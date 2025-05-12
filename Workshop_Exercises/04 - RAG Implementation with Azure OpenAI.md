@@ -29,7 +29,7 @@ Let us implement RAG-pattern with Microsoft Fabric SQL Database, which now has t
 
 > **Note:** You can provide your own password instead of Smoothie@123 in the following code.
 
-    ```
+```
     -- Create a master key for encryption with the specified password
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Smoothie@123';
 
@@ -43,7 +43,7 @@ Let us implement RAG-pattern with Microsoft Fabric SQL Database, which now has t
     FROM sys.database_scoped_credentials
     WHERE name = '<inject key= openAiEndpoint enableCopy="false"/>';
 
-    ```
+```
 ![](../media/Exe6_01_image.png)
 
 4. Click on **New Query**, paste the query below, and then click on **Run**.
