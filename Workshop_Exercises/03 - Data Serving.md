@@ -69,6 +69,9 @@ In this exercise, you will create a **semantic model** from the data previously 
 
    ![](../media/4.png)
 
+7. In the pop-up prompting you to upgrade to a paid Power BI license, select **Try Free**, then click Got it on the following confirmation pop-up.
+
+   ![](../media/6.png)
 
 #### Activity: Use Copilot AI in Power BI to enhance report creation and generate insights
 
