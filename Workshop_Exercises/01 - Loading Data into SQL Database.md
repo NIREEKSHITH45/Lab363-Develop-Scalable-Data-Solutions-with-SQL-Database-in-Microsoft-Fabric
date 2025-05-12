@@ -10,11 +10,11 @@ In this task, you will use **Dataflow Gen2** to ingest data and efficiently copy
 
 #### Activity: Create a new Microsoft Fabric workspace
 
-1. Open a new tab and paste ``app.powerbi.com`` into the browser then press **Enter**.
+1. Open a new tab and paste ``https://app.powerbi.com/`` into the browser then press **Enter**.
 
-    ```
-    app.powerbi.com
-    ```
+   ```
+   https://app.powerbi.com/
+   ```
 
 2. **Sign in** with your **Azure AD** credentials. If you are not already signed in, you will be redirected to the Microsoft Fabric login page.
 
@@ -51,23 +51,23 @@ In this task, you will use **Dataflow Gen2** to ingest data and efficiently copy
 
 1. Click on **+ New item** and type **SQL** in the search bar, then select **SQL Database (preview)**.
 
-![](../media/database1.png)"
+   ![](../media/database1.png)"
 
 2. In the **Name** field, enter ```Contoso_database``` and click on the **Create** button. Database creation should take less than a minute.
 
-```
-Contoso_database
-```
+   ```
+   Contoso_database
+   ```
 
-![](../media/n1.png)
+   ![](../media/n1.png)
 
 3. When the new database is provisioned, on the **Home page** notice that the Explorer pane is showing database objects.
 
-![](../media/f54.png)
+   ![](../media/f54.png)
 
 4. Under **Build your database**, three useful tiles can help you get your newly created database up and running.
 
-![](../media/06.png)
+   ![](../media/06.png)
 
 - **Sample data** - Lets you import sample data into your Empty database.
 - **T-SQL** - Gives you a web-editor that can be used to write T-SQL to create database objects like schema, tables, views, and more. For users who are looking for code snippets to create objects, they can look for available samples in the **Templates** drop down list at the top of the menu.
@@ -81,47 +81,45 @@ Data Factory for Microsoft Fabric is a powerful cloud-based data integration ser
 
 1. Click on the **New data pipeline** option.
 
-![](../media/p1.png)
+   ![](../media/p1.png)
 
 3. In the name field, enter ``Ingest data from Azure SQL DB``and click on the **Create** button.
 
-```
-Ingest data from Azure SQL DB
-```
+   ```
+   Ingest data from Azure SQL DB
+   ```
 
-![](../media/n2.png)
+   ![](../media/n2.png)
 
 4. From the **Home** tab of the pipeline editor, click on the **Copy data** dropdown and select **Use copy assistant** option.
 
-![](../media/25.png)
+   ![](../media/25.png)
 
 5. On the **Home** pane, Search for **Azure SQL** then select the **Azure SQL database** option.
 
-![](../media/n3.png)
-
-
+   ![](../media/n3.png)
 
 9. On the **Connection settings** pane, in the **Server** field, paste the **<inject key= "SQLServerFqdn" enableCopy="true"/>**, and in the **Database** field, paste ```SalesDb```.
 
-![](../media/p2.png)
+   ![](../media/p2.png)
 
 10.  Scroll down and select **Basic** in the **Authentication kind** dropdown. Enter ``labsqladmin`` as the **Username**, ``Smoothie@2025`` as the **Password** and click on the **Next** button.
 
-```
-  labsqladmin
-```
+   ```
+   labsqladmin
+   ```
 
-```
- Smoothie@2025
-```
+   ```
+   Smoothie@2025
+   ```
 
 11. Check **Select all** box and click on the **Next** button.
 
-![](../media/n5.png)
+   ![](../media/n5.png)
 
 12. Click on **OneLake** and select existing **SQL Database**.
 
-![](../media/n6.png)
+   ![](../media/n6.png)
 
 
 #### Activity: Validate the data transfer and ensure schema compatibility
@@ -130,43 +128,43 @@ Ingest data from Azure SQL DB
 
 2. Click on the **Next** button.
 
-![](../media/n7.png)
+   ![](../media/n7.png)
 
 3. Under Options, ensure that **Start data transfer immediately** remains **enabled** (default setting).
 
 4. Click on **Save + Run** to proceed.
 
-![](../media/n8.png)
+   ![](../media/n8.png)
 
 5. Click on the **Ok** button in the **Pipeline run** window..
 
-![](../media/datapipeline12.png)
+   ![](../media/datapipeline12.png)
 
 6. Click on the **Bell** icon at the top right of the screen to verify the Running status of the pipeline.
 
-![](../media/datapipeline14.png)
+   ![](../media/datapipeline14.png)
 
 #### Activity: Verify the data transfer by querying tables in the SQL Database
 
 1. Click on **Workspaces** and select the **<inject key= "WorkspaceName" enableCopy="true"/>** workspace.
 
-![](../media/3.png)
+   ![](../media/3.png)
 
 2. Search for **database** and select the **Contoso_database**.
 
-![](../media/n9.png)
+   ![](../media/n9.png)
 
 3. Click on **Refresh** then click on the **New Query** icon.
 
-![](../media/database3.png)
+   ![](../media/database3.png)
 
 4. Paste the query ```SELECT * FROM inventory```, click on the **Run** icon and then check the output.
 
-![](../media/dim3u.png)
+   ![](../media/dim3u.png)
 
-```
-SELECT * FROM inventory
-```
+   ```
+   SELECT * FROM inventory
+   ```
 
 There you go! Your data has been transferred from the Azure SQL Database to the Microsoft Fabric SQL Database.
 
