@@ -1,0 +1,400 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storage_account_name": {
+            "type": "String",
+            "metadata": {
+                "description": "The name of the storage account"
+            }
+        },
+        "mssql_server_name": {
+            "type": "String",
+            "metadata": {
+                "description": "The name of the SQL server"
+            }
+        },
+        "mssql_database_name": {
+            "type": "String",
+            "metadata": {
+                "description": "The name of the SQL database"
+            }
+        },
+        "mssql_administrator_login": {
+            "type": "String",
+            "metadata": {
+                "description": ""
+            }
+        },
+        "sql_administrator_login_password": {
+            "type": "String",
+            "metadata": {
+                "description": ""
+            }
+        },
+        "azure_open_ai" :
+        {
+            "type": "string"
+        },
+        
+        "openAI_location" : 
+        {
+        "type": "string"
+        },
+        "location" : 
+        {
+            "type": "string"
+        },
+        "comosaccount": {
+            "type": "String"
+        }
+    },
+    "variables": {
+    },
+    "resources": [
+        {
+            "name": "[parameters('storage_account_name')]",
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2020-08-01-preview",
+            "location": "[parameters('location')]",
+            "sku": {
+                "name": "Standard_LRS",
+                "tier": "Standard"
+            },
+            "kind": "StorageV2",
+            "properties": {
+                "isHnsEnabled": "true",
+                "minimumTlsVersion": "TLS1_2",
+                "allowBlobPublicAccess": true,
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": true,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "keyType": "Account",
+                            "enabled": true
+                        },
+                        "blob": {
+                            "keyType": "Account",
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                },
+                "accessTier": "Hot"
+            }
+        },
+        {
+            "name": "[concat(parameters('storage_account_name'), '/default')]",
+            "type": "Microsoft.Storage/storageAccounts/blobServices",
+            "apiVersion": "2020-08-01-preview",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storage_account_name'))]"
+            ],
+            "sku": {
+                "name": "Standard_LRS",
+                "tier": "Standard"
+            },
+            "properties": {
+                "cors": {
+                    "corsRules": [
+                        {
+                            "allowedOrigins": [
+                                "*"
+                            ],
+                            "allowedMethods": [
+                                "GET"
+                            ],
+                            "maxAgeInSeconds": 1000,
+                            "exposedHeaders": [
+                                "*"
+                            ],
+                            "allowedHeaders": [
+                                "*"
+                            ]
+                        },
+                        {
+                            "allowedOrigins": [
+                                "*"
+                            ],
+                            "allowedMethods": [
+                                "POST"
+                            ],
+                            "maxAgeInSeconds": 1000,
+                            "exposedHeaders": [
+                                "*"
+                            ],
+                            "allowedHeaders": [
+                                "*"
+                            ]
+                        },
+                        {
+                            "allowedOrigins": [
+                                "*"
+                            ],
+                            "allowedMethods": [
+                                "DELETE"
+                            ],
+                            "maxAgeInSeconds": 1000,
+                            "exposedHeaders": [
+                                "*"
+                            ],
+                            "allowedHeaders": [
+                                "*"
+                            ]
+                        },
+                        {
+                            "allowedOrigins": [
+                                "*"
+                            ],
+                            "allowedMethods": [
+                                "MERGE"
+                            ],
+                            "maxAgeInSeconds": 1000,
+                            "exposedHeaders": [
+                                "*"
+                            ],
+                            "allowedHeaders": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "[concat(parameters('storage_account_name'), '/default/data')]",
+            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+            "apiVersion": "2020-08-01-preview",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts/blobServices',  parameters('storage_account_name'), 'default')]",
+                "[resourceId('Microsoft.Storage/storageAccounts',  parameters('storage_account_name'))]"
+            ],
+            "properties": {
+                "defaultEncryptionScope": "$account-encryption-key",
+                "denyEncryptionScopeOverride": false,
+                "publicAccess": "Container"
+            }
+        },
+        {
+            "name": "[concat(parameters('storage_account_name'), '/default/sqldatabase')]",
+            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+            "apiVersion": "2020-08-01-preview",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts/blobServices',  parameters('storage_account_name'), 'default')]",
+                "[resourceId('Microsoft.Storage/storageAccounts',  parameters('storage_account_name'))]"
+            ],
+            "properties": {
+                "defaultEncryptionScope": "$account-encryption-key",
+                "denyEncryptionScopeOverride": false,
+                "publicAccess": "Container"
+            }
+        },
+        {
+            "name": "[concat(parameters('storage_account_name'), '/default/cosmosdb')]",
+            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+            "apiVersion": "2020-08-01-preview",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts/blobServices',  parameters('storage_account_name'), 'default')]",
+                "[resourceId('Microsoft.Storage/storageAccounts',  parameters('storage_account_name'))]"
+            ],
+            "properties": {
+                "defaultEncryptionScope": "$account-encryption-key",
+                "denyEncryptionScopeOverride": false,
+                "publicAccess": "Container"
+            }
+        },
+        {
+            "name": "[parameters('mssql_server_name')]",
+            "type": "Microsoft.Sql/servers",
+            "apiVersion": "2022-05-01-preview",
+            "location": "[parameters('location')]",
+            "kind": "v12.0",
+            "properties": {
+                "administratorLogin": "[parameters('mssql_administrator_login')]",
+                "administratorLoginPassword": "[parameters('sql_administrator_login_password')]",
+                "version": "12.0"
+            }
+        },
+        {
+            "name": "[concat(parameters('mssql_server_name'), '/', parameters('mssql_database_name'))]",
+            "type": "Microsoft.Sql/servers/databases",
+            "apiVersion": "2022-05-01-preview",
+            "location": "[parameters('location')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('mssql_server_name'))]"
+            ],
+            "sku": {
+                "name": "GP_S_Gen5",
+                "tier": "GeneralPurpose",
+                "family": "Gen5",
+                "capacity": 1
+            },
+            "kind": "v12.0,user,vcore,serverless",
+            "properties": {
+                "collation": "SQL_Latin1_General_CP1_CI_AS",
+                "catalogCollation": "SQL_Latin1_General_CP1_CI_AS"
+            }
+        },
+        {
+            "name": "[concat(parameters('mssql_server_name'), '/AllowAzureIPs')]",
+            "type": "Microsoft.Sql/servers/firewallRules",
+            "apiVersion": "2022-05-01-preview",
+            "dependsOn": [
+                "[concat('Microsoft.Sql/servers/', parameters('mssql_server_name'))]",
+                "[concat('Microsoft.Sql/servers/', parameters('mssql_server_name'),'/databases/' , parameters('mssql_database_name'))]"
+            ],
+            "properties": {
+                "startIpAddress": "0.0.0.0",
+                "endIpAddress": "255.255.255.255"
+            }
+        },
+        {
+            "type": "Microsoft.CognitiveServices/accounts",
+            "apiVersion": "2023-10-01-preview",
+            "name": "[parameters('azure_open_ai')]",
+            "location": "[parameters('openAI_location')]",
+            "sku": {
+              "name": "S0"
+            },
+            "kind": "OpenAI",
+            "properties": {
+              "customSubDomainName": "[parameters('azure_open_ai')]",
+              "networkAcls": {
+                "defaultAction": "Allow"
+              },
+              "publicNetworkAccess": "Enabled"
+            }
+          },
+          {
+            "type": "Microsoft.DocumentDB/databaseAccounts",
+            "apiVersion": "2024-12-01-preview",
+            "name": "[parameters('comosaccount')]",
+            "location": "[parameters('location')]",
+            "kind": "GlobalDocumentDB",
+            "identity": {
+                "type": "None"
+            },
+            "properties": {
+                "publicNetworkAccess": "Enabled",
+                "enableAutomaticFailover": false,
+                "enableMultipleWriteLocations": false,
+                "isVirtualNetworkFilterEnabled": false,
+                "virtualNetworkRules": [],
+                "disableKeyBasedMetadataWriteAccess": false,
+                "enableFreeTier": false,
+                "enableAnalyticalStorage": true,
+                "analyticalStorageConfiguration": {
+                    "schemaType": "WellDefined"
+                },
+                "databaseAccountOfferType": "Standard",
+                "defaultIdentity": "FirstPartyIdentity",
+                "networkAclBypass": "None",
+                "disableLocalAuth": false,
+                "enablePartitionMerge": false,
+                "consistencyPolicy": {
+                    "defaultConsistencyLevel": "Session",
+                    "maxIntervalInSeconds": 5,
+                    "maxStalenessPrefix": 100
+                },
+                "locations": [
+                    {
+                        "locationName": "[parameters('location')]",
+                        "provisioningState": "Succeeded",
+                        "failoverPriority": 0,
+                        "isZoneRedundant": false
+                    }
+                ],
+                "cors": [],
+                "capabilities": [],
+                "ipRules": [],
+                "backupPolicy": {
+                    "type": "Continuous",
+                    "continuousModeProperties": {
+                        "tier": "Continuous7Days"
+                    }
+                },
+                "networkAclBypassResourceIds": [],
+                "capacity": {
+                    "totalThroughputLimit": 1000
+                }
+            }
+        },
+        {
+            "type": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases",
+            "apiVersion": "2024-12-01-preview",
+            "name": "[concat(parameters('comosaccount'), '/Telemetry')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.DocumentDB/databaseAccounts', parameters('comosaccount'))]"
+            ],
+            "properties": {
+                "resource": {
+                    "id": "Telemetry"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers",
+            "apiVersion": "2024-12-01-preview",
+            "name": "[concat(parameters('comosaccount'), '/Telemetry/Inventory_Data')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.DocumentDB/databaseAccounts/sqlDatabases', parameters('comosaccount'), 'Telemetry')]",
+                "[resourceId('Microsoft.DocumentDB/databaseAccounts', parameters('comosaccount'))]"
+            ],
+            "properties": {
+                "resource": {
+                    "id": "Inventory_Data",
+                    "indexingPolicy": {
+                        "indexingMode": "consistent",
+                        "automatic": true,
+                        "includedPaths": [
+                            {
+                                "path": "/*"
+                            }
+                        ],
+                        "excludedPaths": [
+                            {
+                                "path": "/\"_etag\"/?"
+                            }
+                        ]
+                    },
+                    "partitionKey": {
+                        "paths": [
+                            "/id"
+                        ],
+                        "kind": "Hash",
+                        "version": 2
+                    },
+                    "uniqueKeyPolicy": {
+                        "uniqueKeys": []
+                    },
+                    "conflictResolutionPolicy": {
+                        "mode": "LastWriterWins",
+                        "conflictResolutionPath": "/_ts"
+                    },
+                    "computedProperties": []
+                }
+            }
+        },
+        {
+            "type": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings",
+            "apiVersion": "2024-12-01-preview",
+            "name": "[concat(parameters('comosaccount'), '/Telemetry/Inventory_Data/default')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers', parameters('comosaccount'), 'Telemetry', 'Inventory_Data')]",
+                "[resourceId('Microsoft.DocumentDB/databaseAccounts/sqlDatabases', parameters('comosaccount'), 'Telemetry')]",
+                "[resourceId('Microsoft.DocumentDB/databaseAccounts', parameters('comosaccount'))]"
+            ],
+            "properties": {
+                "resource": {
+                    "throughput": 400
+                }
+            }
+        }
+    ],
+    "outputs": {
+    }
+}
