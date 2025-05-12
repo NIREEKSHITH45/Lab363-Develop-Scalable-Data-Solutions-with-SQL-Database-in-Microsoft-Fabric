@@ -13,7 +13,7 @@ Let us implement RAG-pattern with Microsoft Fabric SQL Database, which now has t
 
 1. Click on **<inject key= "WorkspaceName" enableCopy="true"/>** select the workspace.
 
-   ![](../media/wss.png)
+   ![](../media/3.png)
 
    > **Note:** If you see a pop-up like the one shown below, click **Don't save** to proceed.
 
