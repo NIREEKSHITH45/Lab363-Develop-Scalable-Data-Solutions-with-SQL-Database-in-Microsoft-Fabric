@@ -29,7 +29,7 @@ In this task, you will use **Dataflow Gen2** to ingest data and efficiently copy
 
    ![alt text](../media/image-7.png)
 
-4. In the **Name** field, enter **<inject key= WorkspaceName enableCopy="true"/>** and then expand **Advanced Settings**.
+4. In the **Name** field, enter **<inject key= "WorkspaceName" enableCopy="true"/>** and then expand **Advanced Settings**.
 
     > **Note:** It is very Important to use the workspace name provided above in the lab for a seamless experience.
 
