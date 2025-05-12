@@ -97,14 +97,13 @@ Let us implement RAG-pattern with Microsoft Fabric SQL Database, which now has t
     -- Set the output parameter with the extracted embedding data
     set @embedding = cast(@re as vector(1536));
 
-```
-   ![](../media/Exe6_02_image.png)
+    ```
+![](../media/Exe6_02_image.png)
 
 5. Click on **New Query**, paste the query below, and then click on **Run**.
 
-    This code declares a cursor to iterate through products in the dbo.dim_products table. It generates an embedding for each of the products using the stored procedure created in previous step (dbo.get_embedding), and inserts the results into the dbo.Product_Embeddings table.
-
-    ```
+This code declares a cursor to iterate through products in the dbo.dim_products table. It generates an embedding for each of the products using the stored procedure created in previous step (dbo.get_embedding), and inserts the results into the dbo.Product_Embeddings table.
+```
     -- Create a table named Product_Embeddings to hold product names, descriptions, and embeddings
     CREATE TABLE dbo.Product_Embeddings (
         ProductName NVARCHAR(MAX),
@@ -153,7 +152,7 @@ Let us implement RAG-pattern with Microsoft Fabric SQL Database, which now has t
     CLOSE ProductCursor;
     DEALLOCATE ProductCursor;
 
-    ```
+```
    ![](../media/Exe6_03_image.png)
 
 6. Click on **New Query**, paste the following query in the query editor, and then click on **Run**.
