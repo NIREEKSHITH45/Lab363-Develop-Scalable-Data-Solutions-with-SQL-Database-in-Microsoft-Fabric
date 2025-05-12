@@ -35,7 +35,6 @@ SELECT TOP(10)
     JOIN dbo.dimdate d ON f.OrderDateKey = d.DateKey
     GROUP BY d.CalYear
     ORDER BY d.CalendarYear;
-
     ```
    ![](../media/database7.png)
 
