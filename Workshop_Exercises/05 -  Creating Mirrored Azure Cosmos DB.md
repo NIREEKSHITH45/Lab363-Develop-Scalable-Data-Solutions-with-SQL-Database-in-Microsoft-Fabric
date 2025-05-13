@@ -19,7 +19,7 @@ Mirroring in Fabric provides an easy experience to avoid complex ETL (Extract Tr
 
 10. In the **Cosmos DB Endpoint** field, paste: **<inject key="CosmosEndpoint" enableCopy="true"/>**
 
-11. Select **Account key** for Authentication kind, paste the following in the **Account Key** field: **<inject key="OpenAiKey" enableCopy="true"/>** and click on the **Connect** button.
+11. Select **Account key** for Authentication kind, paste the following in the **Account Key** field: **<inject key="CosmosPrimaryKey" enableCopy="true"/>** and click on the **Connect** button.
 
     ![Task-1.1_4.png.png](../media/p19.png)
 
